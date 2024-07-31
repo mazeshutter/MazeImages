@@ -1,0 +1,44 @@
+/*
+ * Nav Gradaint
+ */
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.nav::after,
+.nav::before {
+    content: &#39;
+    &#39;
+    ;
+    background-image: conic-gradient(from var(--angle), transparent 75%, #FFD700);
+    position: absolute;
+    height: calc(100% - 35px);
+    width: calc(100% - 35px);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 50px;
+    animation: 3s spin linear infinite;
+}
+
+.nav::before {
+    filter: blur(.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+
+    }
+
+    to {
+        --angle: 360deg;
+    }
+
+
+}
