@@ -10,9 +10,7 @@
 
 .nav::after,
 .nav::before {
-    content: &#39;
-    &#39;
-    ;
+    content: '';
     background-image: conic-gradient(from var(--angle), transparent 75%, #FFD700);
     position: absolute;
     height: calc(100% - 35px);
